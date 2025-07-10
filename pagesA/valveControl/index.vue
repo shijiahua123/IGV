@@ -159,7 +159,7 @@
             handleNavigateTo(valveInfo) {
                 console.log(valveInfo.locationName);
                 uni.navigateTo({
-                    url: '/pagesA/valveControl/valveInfo?valveInfo=' + JSON.stringify(valveInfo),
+                    url: '/pagesA/valveControl/newValueInfo?valveInfo=' + JSON.stringify(valveInfo),
                 });
             },
 

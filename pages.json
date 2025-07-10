@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"path" : "valveControl/valveInfo",
+					"path" : "valveControl/newValueInfo",
 					"style" : 
 					{
 						"navigationBarTitleText" : "阀门信息",

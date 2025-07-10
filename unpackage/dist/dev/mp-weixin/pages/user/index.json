@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "完善用户信息",
-  "usingComponents": {
-    "u--input": "/uni_modules/uview-ui/components/u--input/u--input",
-    "u-button": "/uni_modules/uview-ui/components/u-button/u-button"
-  }
-}
