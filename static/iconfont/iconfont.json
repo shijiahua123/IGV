@@ -6,6 +6,111 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "44782384",
+      "name": "新建",
+      "font_class": "xinjian-01",
+      "unicode": "e734",
+      "unicode_decimal": 59188
+    },
+    {
+      "icon_id": "44781938",
+      "name": "排序",
+      "font_class": "paixu-01",
+      "unicode": "e733",
+      "unicode_decimal": 59187
+    },
+    {
+      "icon_id": "44781676",
+      "name": "上移",
+      "font_class": "shangyi-01",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    },
+    {
+      "icon_id": "44781624",
+      "name": "下移",
+      "font_class": "xiayi-01",
+      "unicode": "e731",
+      "unicode_decimal": 59185
+    },
+    {
+      "icon_id": "44781309",
+      "name": "用户",
+      "font_class": "yonghu-01",
+      "unicode": "e730",
+      "unicode_decimal": 59184
+    },
+    {
+      "icon_id": "44780972",
+      "name": "地块",
+      "font_class": "dikuai-01",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "44780779",
+      "name": "操作",
+      "font_class": "caozuo-01",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "44780725",
+      "name": "操作记录",
+      "font_class": "caozuojilu-01",
+      "unicode": "e72d",
+      "unicode_decimal": 59181
+    },
+    {
+      "icon_id": "44780612",
+      "name": "重命名",
+      "font_class": "zhongmingming-01",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    },
+    {
+      "icon_id": "44780581",
+      "name": "删除",
+      "font_class": "shanchu-01",
+      "unicode": "e72b",
+      "unicode_decimal": 59179
+    },
+    {
+      "icon_id": "44776928",
+      "name": "减少开度",
+      "font_class": "jianshaokaidu-01-01",
+      "unicode": "e72a",
+      "unicode_decimal": 59178
+    },
+    {
+      "icon_id": "44776908",
+      "name": "增加开度",
+      "font_class": "zengjiakaidu-01",
+      "unicode": "e729",
+      "unicode_decimal": 59177
+    },
+    {
+      "icon_id": "44776895",
+      "name": "关阀",
+      "font_class": "guanfa-01",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "43548347",
+      "name": "启动时间",
+      "font_class": "qidongshijian-01",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "43548119",
+      "name": "剩余时长",
+      "font_class": "shengyushichang-01",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
       "icon_id": "43119957",
       "name": "信号-25%",
       "font_class": "a-xinhao-25-01",
@@ -118,11 +223,39 @@
       "unicode_decimal": 59149
     },
     {
+      "icon_id": "43258781",
+      "name": "信号0-7",
+      "font_class": "xinhao-0-7-copy",
+      "unicode": "e71d",
+      "unicode_decimal": 59165
+    },
+    {
       "icon_id": "43100914",
       "name": "信号",
       "font_class": "xinhao-01",
       "unicode": "e70b",
       "unicode_decimal": 59147
+    },
+    {
+      "icon_id": "43258783",
+      "name": "信号8-15",
+      "font_class": "xinhao-8-15-copy",
+      "unicode": "e71e",
+      "unicode_decimal": 59166
+    },
+    {
+      "icon_id": "43258784",
+      "name": "信号16-23",
+      "font_class": "xinhao-16-23-copy",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    },
+    {
+      "icon_id": "43258810",
+      "name": "信号24-32",
+      "font_class": "xinhao-24-32-copy",
+      "unicode": "e720",
+      "unicode_decimal": 59168
     },
     {
       "icon_id": "43100777",

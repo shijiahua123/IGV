@@ -101,19 +101,22 @@
                     width: 120px;
                     height: 36px !important;
                     line-height: 36px !important;
-                    border-radius: 4px;
+                    border-radius: 25px;
                     text-align: center;
                     &--cancel {
-                        border: 1px solid $u-main-color;
+                        background-color: #f6f6f6;
+                        border: 1px solid $u-blue;
                         margin-right: 20px;
                         .u-modal__button-group__wrapper__text {
-                            color: #81B337 !important;
+                            color: $u-blue !important;
+                            font-size: 14px !important;
                         }
                     }
                     &--confirm {
-                        background-color: $u-main-color;
+                        background-color: $u-blue;
                         .u-modal__button-group__wrapper__text {
                             color: #fff !important;
+                            font-size: 14px !important;
                         }
                     }
                 }
