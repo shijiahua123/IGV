@@ -929,12 +929,12 @@ export default {
         top: 110px;
         height: calc(100vh - 110px);
         .valve-list {
-            padding: 15px;
+            padding: 10px;
             .valve-card {
                 background: #fff;
                 border-radius: 6px;
                 margin-bottom: 12px;
-                padding: 15px;
+                padding: 10px;
                 .card-header {
                     display: flex;
                     justify-content: space-between;
@@ -1004,12 +1004,20 @@ export default {
                         align-items: center;
                     }
                     .card-body-left {
+                        width: 30%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-around;
                     }
+                    .card-body-center {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
                     .card-body-right {
+                        width: 30%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -1042,6 +1050,7 @@ export default {
                         color: #a0a7b3;
                         border-radius: 25px;
                         border: 1px solid #cecece;
+                        width: 60px;
                         padding: 6px 14px;
                         font-size: 14px;
                         margin-top: 10px;
@@ -1326,14 +1335,17 @@ export default {
             &.cancel-button {
                 margin-right: 10px;
                 ::v-deep .u-button {
-                    width: 100px;
+                    width: 120px;
                     height: 32px;
                     border-radius: 25px;
+                    color: $u-blue;
+                    border-color: $u-blue;
+                    background: #f6f6f6;
                 }
             }
             &.confirm-button {
                 ::v-deep .u-button {
-                    width: 100px;
+                    width: 120px;
                     height: 32px;
                     border-radius: 25px;
                 }
