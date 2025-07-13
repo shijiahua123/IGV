@@ -6,6 +6,7 @@
             :showCancelButton="showCancelButton"
             cancelText="取消"
             confirmText="确定"
+            :closeOnClickOverlay="false"
             @cancel="handleCancel"
             @confirm="handleConfirm"
         >
@@ -42,15 +43,41 @@
                 }
             }
         },
+        watch: {
+            showModal: {
+                handler(newVal) {
+                    if (newVal) {
+                        this.disableScroll()
+                    } else {
+                        this.enableScroll()
+                    }
+                },
+                immediate: true
+            }
+        },
         options: {
 			styleIsolation: 'shared'
 		},
 		data() {
 			return {
-   
+                scrollY: 0
 			}
 		},
 		methods: {
+            // 简单的禁止滚动方法
+            disableScroll() {
+                this.scrollY = window.scrollY
+                document.body.classList.add('modal-open')
+                document.body.style.top = `-${this.scrollY}px`
+            },
+            
+            // 简单的恢复滚动方法
+            enableScroll() {
+                document.body.classList.remove('modal-open')
+                window.scrollTo(0, this.scrollY)
+                document.body.style.top = ''
+            },
+
             handleCancel() {
                 this.visiable = false
                 this.$emit('cancel')
@@ -60,8 +87,12 @@
                 this.visiable = false
                 this.$emit('confirm')
             }
-
 		},
+        
+        // 组件销毁时确保恢复滚动
+        beforeDestroy() {
+            this.enableScroll()
+        }
 	}
 </script>
 
@@ -125,5 +156,22 @@
         .slot-content {
             width: 100%;
         }
+    }
+</style>
+
+<style lang="scss">
+    // 简单的滚动阻止方案
+    body.modal-open {
+        overflow: hidden !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        touch-action: none !important;
+    }
+    
+    // 确保弹窗内容可以正常交互
+    .custom-modal {
+        pointer-events: auto !important;
+        touch-action: auto !important;
     }
 </style>

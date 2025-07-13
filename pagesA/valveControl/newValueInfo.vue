@@ -214,7 +214,10 @@
                                 </view>
                                 <view
                                     class="close-btn"
-                                    @click="() => handleOpenQuickOpenValveModal(item)"
+                                    @click="
+                                        () =>
+                                            handleOpenQuickOpenValveModal(item)
+                                    "
                                 >
                                     <i class="iconfont">&#xe728;</i>
                                     <text
@@ -452,18 +455,12 @@
                         <view class="slider-minus" @click="handleSliderMinus">
                             <i class="iconfont">&#xe72a;</i>
                         </view>
-                        <u-slider
-                            v-if="quickOpenValveModalVisiable"
-                            v-model="stepValue"
-                            min="0"
-                            max="100"
-                            height="20px"
-                            blockSize="20px"
-                            blockWidth="20px"
-                            activeColor="#0F40F5"
-                            inactiveColor="#E0E0E0"
-                            blockColor="#0F40F5"
-                        ></u-slider>
+                        <view style="width: 180px; margin: 0 15px;">
+                            <custom-slider
+                                class="slider"
+                                v-model="stepValue"
+                            ></custom-slider>
+                        </view>
                         <view class="slider-plus" @click="handleSliderPlus">
                             <i class="iconfont">&#xe729;</i>
                         </view>
@@ -471,8 +468,8 @@
                 </view>
             </view>
         </CustomModal>
-          <!-- 关阀 -->
-          <CustomModal
+        <!-- 关阀 -->
+        <CustomModal
             :showModal="quickCloseValveModalVisiable"
             title="关阀"
             @cancel="handleQuickCloseValveCancel"
@@ -481,7 +478,9 @@
             <view slot="content">
                 <view class="modal-content-top">
                     <view class="title">你是否确定立即关闭此阀门？</view>
-                    <view class="sup-title"> · 阀门关闭时请注意管道压力以防爆管。</view>
+                    <view class="sup-title">
+                        · 阀门关闭时请注意管道压力以防爆管。</view
+                    >
                 </view>
             </view>
         </CustomModal>
@@ -490,7 +489,7 @@
 
 <script>
 import CustomModal from '@/components/CustomModal/index'
-
+import CustomSlider from '@/components/CustomSlider/index'
 export default {
     data() {
         return {
@@ -615,7 +614,8 @@ export default {
         }
     },
     components: {
-        CustomModal
+        CustomModal,
+        CustomSlider
     },
     methods: {
         // 打开日历
@@ -774,12 +774,6 @@ export default {
             console.log('value', this.valveSettingData)
         },
 
-        // 批量控制参数设置
-        handleValveSetting(value) {
-            this.$set(this.valveSettingData, 'endParam', value)
-            console.log('value', this.valveSettingData)
-        },
-
         // 打开一键关阀弹窗
         handleOpenCloseValveModal() {
             this.closeValveModalVisiable = true
@@ -843,7 +837,7 @@ export default {
         // 快捷关阀确认
         handleQuickCloseValveConfirm() {
             this.quickCloseValveModalVisiable = false
-        },
+        }
     },
     mounted() {
         // 获取屏幕高度并计算scroll-view高度
